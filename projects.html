@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sam Adu-Gyapong's software development projects including StatScout, ApplyTrack, BuzzBeats, and more.">
+    <title>Projects | Sam Adu-Gyapong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">SAG</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Page Header -->
+        <section id="page-header">
+            <h1>My Projects</h1>
+            <p>
+                Building projects is how I learn best, and every application you see here was built to solve a <strong>real problem</strong> that I or someone I know actually had.
+                I don't believe in building toy apps for the sake of it; I believe in shipping things that work, are deployed to the web, and can be used by real people.
+                Each project on this page is <em>fully deployed and production-ready</em>, meaning it has a live URL, a real database, and handles real user interactions.
+                I have worked with a range of technologies across these projects, including React, Next.js, Flask, PostgreSQL, Supabase, and WebSockets, among others.
+                Some of these projects were built solo, and some were collaborative team efforts, and both have taught me different and equally valuable lessons.
+                I approach every project with the same mindset: start with the user, design the data model, build the backend, then build the frontend on top of it.
+                You can find live links and GitHub repositories for each project below, and I encourage you to explore them and see the work firsthand.
+            </p>
+            <p>
+                The projects listed here represent a range of different problem domains: sports analytics, productivity tools, entertainment, and health technology.
+                This variety is intentional: I want to be a developer who can tackle problems in <u>any domain</u>, not just one vertical.
+                I believe that strong fundamentals in software engineering transfer across industries, and building in different areas helps me develop that versatility.
+                Each project also pushed me technically in different ways: StatScout taught me API integration and data processing; ApplyTrack taught me authentication flows and state management; BuzzBeats taught me real-time communication with WebSockets; and my capstone taught me how to work with messy, real-world sensor data.
+                I am always working on something new, and this list will continue to grow as I take on more challenges in my final year of school and beyond.
+                If any of these projects interest you or you want to discuss them further, feel free to <a href="contact.html">reach out</a>.
+            </p>
+
+            <!-- Projects Overview Table -->
+            <h2>Projects at a Glance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Primary Tech</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>StatScout</strong></td>
+                        <td>React, Flask, PostgreSQL</td>
+                        <td>Solo</td>
+                        <td><em>Live &amp; Active</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ApplyTrack</strong></td>
+                        <td>React, Flask, PostgreSQL</td>
+                        <td>Solo</td>
+                        <td><em>Live &amp; Active</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>BuzzBeats</strong></td>
+                        <td>Next.js, Node.js, WebSockets</td>
+                        <td>Team</td>
+                        <td><em>In Development</em></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Multi-Sensor Toolkit</strong></td>
+                        <td>Python, Dash, Plotly, ML</td>
+                        <td>Team (Capstone)</td>
+                        <td><em>In Progress</em></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Aside: Note on Technology -->
+            <aside>
+                <h3>A Note on Technology Choices</h3>
+                <p>
+                    I chose <strong>React + Flask</strong> as my core full-stack combination because React gives me
+                    a component-driven frontend with a rich ecosystem, while Flask is lightweight and lets me
+                    build clean, well-structured REST APIs in Python. I host frontends on <u>Vercel</u>
+                    and backends on <u>Render</u>, with <u>Supabase</u> for managed PostgreSQL databases.
+                </p>
+            </aside>
+        </section>
+
+        <!-- Projects Detail -->
+        <section id="projects">
+
+            <!-- StatScout -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/statscout.png" alt="StatScout application screenshot">
+                </div>
+                <div class="project-details">
+                    <h2>StatScout</h2>
+                    <p class="project-tech">React &bull; Flask &bull; PostgreSQL &bull; Vercel &bull; Render &bull; Supabase</p>
+                    <p>
+                        StatScout is a <strong>full-stack multi-sport analytics platform</strong> that gives sports bettors a data-driven edge across NBA player props and soccer match betting.
+                        The platform integrates with real-time betting odds APIs to display current sportsbook lines, then computes <em>hit rates</em> and <em>trust scores</em> based on historical performance data to help users identify value bets.
+                        The idea came from my own frustration with manually researching player stats before placing bets, and I wanted a tool that could surface the best opportunities automatically.
+                        I built the data pipeline in Flask, storing historical game logs and odds data in a PostgreSQL database hosted on Supabase.
+                        The React frontend fetches this data and displays it in a clean, filterable dashboard that makes it easy to compare props across different sportsbooks.
+                        One of the most technically interesting features is the <u>halftime live projection engine</u>, which takes a player's first-half performance and projects their full-game total using weighted historical averages.
+                        StatScout also includes matchup analysis, home/away splits, and opponent defensive rankings to give users context beyond just the raw numbers.
+                    </p>
+                    <p>
+                        Building StatScout taught me a great deal about third-party API integration, rate limiting, and data normalization across different data sources.
+                        I also learned how important caching is: without it, every page load would hit the external odds API and slow everything down significantly.
+                        The trust score algorithm was one of the most challenging parts to design, because it needed to balance multiple factors like hit rate, sample size, and recent form without overweighting any single variable.
+                        I iterated on that algorithm several times before arriving at a formula I was satisfied with, and I documented the logic in the codebase so future contributors can understand and improve it.
+                        The project is live at <a href="https://statscout.vercel.app/" target="_blank">statscout.vercel.app</a> and I continue to expand sport coverage and add new features.
+                    </p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time betting odds across NBA and soccer via third-party API integration</li>
+                        <li>Hit rate and trust score calculations with custom algorithms</li>
+                        <li>Halftime live projection engine</li>
+                        <li>Matchup history and opponent defensive rankings</li>
+                        <li>Dark mode, responsive design, and persistent user preferences</li>
+                        <li>Parlay builder for combining multiple props</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://statscout.vercel.app/" target="_blank">View Live Site</a>
+                        <a href="https://github.com/SamAduG1/statscout" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ApplyTrack -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/applytrack.png" alt="ApplyTrack application screenshot">
+                </div>
+                <div class="project-details">
+                    <h2>ApplyTrack</h2>
+                    <p class="project-tech">React &bull; Flask &bull; PostgreSQL &bull; JWT &bull; Vercel &bull; Render</p>
+                    <p>
+                        ApplyTrack is a <strong>full-stack job application management platform</strong> built to help job seekers (including myself) stay organized during a job search.
+                        The idea was simple: I was applying to dozens of positions and losing track of where each one stood in the process, so I built a tool to solve that exact problem.
+                        Users can create a secure account, log in with <em>JWT-based authentication</em>, and track every application from submission through offer in one centralized place.
+                        The platform offers two views: a traditional list view with search and filter capabilities, and a <u>Kanban board</u> where users can drag applications through stages like Applied, Phone Screen, Interview, Offer, and Rejected.
+                        A dashboard provides summary statistics (total applications, response rate, interviews scheduled) so users can measure their job search performance at a glance.
+                        I also implemented a <strong>password reset via email</strong> feature, which required setting up an email service on the backend and securely generating and validating time-limited reset tokens.
+                        The entire application has dark mode support, with the user's preference stored in localStorage so it persists between sessions.
+                    </p>
+                    <p>
+                        This project pushed my skills in authentication and session management significantly, since handling JWTs securely (including refresh tokens, expiration, and logout) requires careful design.
+                        I also learned a lot about state management in React by building the Kanban board, which requires complex, nested state updates when cards move between columns.
+                        The dashboard charts are built with Recharts, a React charting library, which was new to me and required diving into documentation to customize the visualizations the way I wanted them.
+                        I focused heavily on the <em>user experience</em> of this app: every interaction, from adding an application to updating its status, should feel fast and frictionless.
+                        ApplyTrack is live at <a href="https://job-tracker-three-ochre.vercel.app/" target="_blank">job-tracker-three-ochre.vercel.app</a> and is the project I most often reference in interviews.
+                    </p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>JWT-based authentication with password reset via email</li>
+                        <li>Kanban board with drag-and-drop stage management</li>
+                        <li>Dashboard with application statistics and charts</li>
+                        <li>Full CRUD operations for job application records</li>
+                        <li>Dark mode toggle with local storage persistence</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://job-tracker-three-ochre.vercel.app/" target="_blank">View Live Site</a>
+                        <a href="https://github.com/SamAduG1/job-tracker" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BuzzBeats -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/buzzbeats.png" alt="BuzzBeats application screenshot">
+                </div>
+                <div class="project-details">
+                    <h2>BuzzBeats</h2>
+                    <p class="project-tech">Next.js &bull; Node.js &bull; WebSockets &bull; Spotify API</p>
+                    <p>
+                        BuzzBeats is a <strong>real-time multiplayer music quiz game</strong> built for people who love music and a bit of friendly competition.
+                        The concept is straightforward: a host creates a game lobby, selects a playlist or genre, and players join via a shared code on their own device.
+                        Once the game starts, audio clips are played and players race to identify the song or artist as quickly as possible, as both speed and accuracy affect your score.
+                        The real-time aspect is powered by <em>WebSockets</em>, which allow the host and all connected players to stay in sync without any page refreshes or polling.
+                        This was my first time building a project with WebSockets, and it was one of the most challenging and rewarding technical experiences I have had.
+                        Designing the event model (what messages get sent, when, and to whom) required careful thinking about race conditions, disconnections, and state synchronization across clients.
+                        The project was built as a team effort, which also gave me experience with collaborative Git workflows, code reviews, and dividing responsibilities across a shared codebase.
+                    </p>
+                    <p>
+                        BuzzBeats is currently in active development and has not yet been deployed to a public URL, but the core gameplay loop is fully functional locally.
+                        We are working on adding a <u>Spotify integration</u> to allow hosts to pull from their own playlists, which requires handling OAuth authentication with the Spotify API.
+                        The frontend is built in <strong>Next.js</strong>, which gave us server-side rendering capabilities and a clean routing structure for the different game views: the host lobby, player lobby, game screen, and results screen.
+                        Future plans include leaderboards, custom round timers, and the ability to save and replay past games.
+                        Once deployed, this will be the project I am most excited to share because it is genuinely fun to play with friends.
+                    </p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time multiplayer via WebSocket connections</li>
+                        <li>Host and player roles with separate control panels</li>
+                        <li>Live leaderboard and per-round scoring</li>
+                        <li>Lobby system with shareable join codes</li>
+                        <li>Music integration for audio clip playback during rounds</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Capstone -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/capstone.png" alt="Multi-Sensor Data Visualization Toolkit screenshot">
+                </div>
+                <div class="project-details">
+                    <h2>Multi-Sensor Data Visualization Toolkit</h2>
+                    <p class="project-tech">Python &bull; Dash &bull; Plotly &bull; Machine Learning &bull; GitLab</p>
+                    <p>
+                        This is my year-long <strong>senior capstone project</strong>, developed in collaboration with a research partner and a team of four engineers.
+                        The toolkit analyzes multi-sensor time-series data collected from health monitoring wearables, applies machine learning models for anomaly detection, and presents findings through an interactive web dashboard built with Python Dash and Plotly.
+                        The research partner provided real sensor datasets from ongoing health studies, which meant we were working with <em>messy, real-world data</em> (missing values, sensor drift, and inconsistent sampling rates) rather than clean textbook datasets.
+                        Building the data ingestion and preprocessing pipeline to handle this variability was one of the most complex engineering challenges I have faced.
+                        Our anomaly detection model uses a combination of statistical thresholding and a trained isolation forest to identify patterns in the data that may indicate health events worth flagging for researchers.
+                        The visualization dashboard is designed to be accessible to <u>non-technical health researchers</u>, so we put significant effort into making the charts informative and the interface intuitive, even for users with no data science background.
+                        The project is developed using Agile methodology, with two-week sprints, regular standups, and a GitLab CI/CD pipeline for automated testing and deployment.
+                    </p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>ML-based anomaly detection on time-series sensor data</li>
+                        <li>Interactive data visualization dashboard with Plotly and Dash</li>
+                        <li>Data processing pipelines for multi-sensor input</li>
+                        <li>Agile development with sprint planning and GitLab CI/CD</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="http://datavis.capstone.csi.miamioh.edu/" target="_blank">View Live Site</a>
+                    </div>
+                    <p><em>Note: Live site requires Miami University network or VPN access. Repository is on a private university GitLab instance.</em></p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sam Adu-Gyapong. All Rights Reserved.</p>
+        <p>
+            <a href="https://github.com/SamAduG1" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/sam-adu-gyapong-6a8b8130a/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to top">&#8679;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

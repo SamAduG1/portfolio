@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sam Adu-Gyapong - Full Stack Developer and Software Engineering Student">
+    <title>Contact | Sam Adu-Gyapong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">SAG</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="contact-page">
+
+            <h1>Let's Talk</h1>
+            <p class="contact-intro">
+                Open to <strong>opportunities, collaborations, and conversations</strong>.
+                Whether it's a job inquiry, a project idea, or just a question, drop me a message
+                and I'll get back to you within <em>24 hours</em>.
+            </p>
+
+            <!-- Contact Layout: Form + Info side by side -->
+            <div id="contact-content">
+
+                <!-- Contact Form -->
+                <div id="contact-form">
+                    <h2>Send a Message</h2>
+                    <form action="https://formspree.io/f/mbdzbbkv" method="POST">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+
+                    </form>
+
+                    <!-- Success message shown by script.js after form submit -->
+                    <div id="form-success">
+                        Thanks for reaching out! I'll get back to you within 24 hours.
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div id="contact-info">
+
+                    <h2>Find Me Online</h2>
+
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:samadugyapong@gmail.com">samadugyapong@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/SamAduG1" target="_blank">github.com/SamAduG1</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/sam-adu-gyapong-6a8b8130a/" target="_blank">linkedin.com/in/sam-adu-gyapong</a></p>
+                    </div>
+
+                    <!-- Aside: Availability -->
+                    <aside>
+                        <h3>Availability</h3>
+                        <p>
+                            <strong>Actively looking</strong> for full-time roles starting
+                            <u>Summer / Fall 2026</u>. Open to <em>remote, hybrid, or in-person</em>.
+                        </p>
+                        <ul>
+                            <li>Full-stack development</li>
+                            <li>Data engineering</li>
+                            <li>Product-focused engineering</li>
+                        </ul>
+                    </aside>
+
+                    <!-- Response Times Table -->
+                    <h3>Response Times</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Channel</th>
+                                <th>Response</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Email</td>
+                                <td>Within 24 hrs</td>
+                            </tr>
+                            <tr>
+                                <td>LinkedIn</td>
+                                <td>Within 48 hrs</td>
+                            </tr>
+                            <tr>
+                                <td>GitHub</td>
+                                <td>Varies</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sam Adu-Gyapong. All Rights Reserved.</p>
+        <p>
+            <a href="https://github.com/SamAduG1" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/sam-adu-gyapong-6a8b8130a/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to top">&#8679;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
