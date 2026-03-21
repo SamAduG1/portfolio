@@ -51,6 +51,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.75;
+    overflow-x: hidden; /* prevent horizontal scroll on all screen sizes */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 
@@ -801,14 +806,24 @@ nav ul li a.active {
         height: 160px;
     }
 
-    /* Skills grid: 2 columns */
-    .skill-card {
-        min-width: calc(50% - 10px);
+    /* Skills grid: single column, full width */
+    .skills-grid {
+        flex-direction: column;
     }
 
-    /* Project previews: 2 columns */
+    .skill-card {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* Project previews: single column */
+    .project-preview-grid {
+        flex-direction: column;
+    }
+
     .project-preview {
-        min-width: calc(50% - 10px);
+        min-width: 0;
+        width: 100%;
     }
 
     /* Project cards: stack image above details */
@@ -865,15 +880,7 @@ nav ul li a.active {
         text-align: center;
     }
 
-    /* Skills: single column */
-    .skill-card {
-        min-width: 100%;
-    }
-
-    /* Project previews: single column */
-    .project-preview {
-        min-width: 100%;
-    }
+    /* Skills and project previews already single column from 768px breakpoint */
 
     /* Section headings */
     h1 {
