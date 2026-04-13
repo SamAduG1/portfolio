@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="materialize.html">Profile</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -87,33 +88,33 @@
                 <div class="skill-col">
                     <h3>Languages</h3>
                     <ul class="skill-icon-list">
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>C++</li>
-                        <li>SQL</li>
-                        <li>HTML &amp; CSS</li>
+                        <li><i class="material-icons">code</i>JavaScript</li>
+                        <li><i class="material-icons">code</i>Python</li>
+                        <li><i class="material-icons">code</i>Java</li>
+                        <li><i class="material-icons">code</i>C++</li>
+                        <li><i class="material-icons">code</i>SQL</li>
+                        <li><i class="material-icons">code</i>HTML &amp; CSS</li>
                     </ul>
                 </div>
                 <div class="skill-col">
                     <h3>Frameworks &amp; Libraries</h3>
                     <ul class="skill-icon-list">
-                        <li>React</li>
-                        <li>Next.js</li>
-                        <li>Flask</li>
-                        <li>Node.js</li>
-                        <li>Bootstrap</li>
+                        <li><i class="material-icons">layers</i>React</li>
+                        <li><i class="material-icons">layers</i>Next.js</li>
+                        <li><i class="material-icons">layers</i>Flask</li>
+                        <li><i class="material-icons">layers</i>Node.js</li>
+                        <li><i class="material-icons">layers</i>Bootstrap</li>
                     </ul>
                 </div>
                 <div class="skill-col">
                     <h3>Tools &amp; Platforms</h3>
                     <ul class="skill-icon-list">
-                        <li>Git &amp; GitHub</li>
-                        <li>PostgreSQL</li>
-                        <li>Supabase</li>
-                        <li>Vercel</li>
-                        <li>Render</li>
-                        <li>Vite</li>
+                        <li><i class="material-icons">build</i>Git &amp; GitHub</li>
+                        <li><i class="material-icons">build</i>PostgreSQL</li>
+                        <li><i class="material-icons">build</i>Supabase</li>
+                        <li><i class="material-icons">build</i>Vercel</li>
+                        <li><i class="material-icons">build</i>Render</li>
+                        <li><i class="material-icons">build</i>Vite</li>
                     </ul>
                 </div>
             </div>
@@ -169,41 +170,74 @@
             <h2>Featured Projects</h2>
             <div class="project-preview-grid">
 
-                <a href="projects.html#statscout" class="project-preview-link">
-                    <div class="project-preview">
+                <div class="project-preview" data-href="projects.html#statscout">
+                    <div class="project-preview-image">
                         <img src="images/statscout.png" alt="StatScout project screenshot">
+                    </div>
+                    <div class="project-preview-content">
                         <h3>StatScout</h3>
-                        <p>
-                            Multi-sport analytics platform covering NBA props and soccer
-                            with real-time betting odds, hit rates, and trust scores.
-                        </p>
+                        <div class="project-tech-badges">
+                            <span class="project-tech-badge">React</span>
+                            <span class="project-tech-badge">Flask</span>
+                            <span class="project-tech-badge">PostgreSQL</span>
+                        </div>
+                        <p>Multi-sport analytics platform covering NBA props and soccer with real-time odds, hit rates, and trust scores.</p>
                     </div>
-                </a>
+                    <div class="project-preview-action">
+                        <a href="https://statscout.vercel.app/" target="_blank">Live Site</a>
+                        <a href="projects.html#statscout">Details</a>
+                    </div>
+                </div>
 
-                <a href="projects.html#applytrack" class="project-preview-link">
-                    <div class="project-preview">
+                <div class="project-preview" data-href="projects.html#applytrack">
+                    <div class="project-preview-image">
                         <img src="images/applytrack.png" alt="ApplyTrack project screenshot">
+                    </div>
+                    <div class="project-preview-content">
                         <h3>ApplyTrack</h3>
-                        <p>
-                            Full-stack job application tracker featuring a Kanban board,
-                            dashboard analytics, and JWT-based user authentication.
-                        </p>
+                        <div class="project-tech-badges">
+                            <span class="project-tech-badge">React</span>
+                            <span class="project-tech-badge">Flask</span>
+                            <span class="project-tech-badge">JWT</span>
+                        </div>
+                        <p>Full-stack job application tracker with Kanban board, dashboard analytics, and JWT-based authentication.</p>
                     </div>
-                </a>
+                    <div class="project-preview-action">
+                        <a href="https://job-tracker-three-ochre.vercel.app/" target="_blank">Live Site</a>
+                        <a href="projects.html#applytrack">Details</a>
+                    </div>
+                </div>
 
-                <a href="projects.html#buzzbeats" class="project-preview-link">
-                    <div class="project-preview">
+                <div class="project-preview" data-href="projects.html#buzzbeats">
+                    <div class="project-preview-image">
                         <img src="images/buzzbeats.png" alt="BuzzBeats project screenshot">
-                        <h3>BuzzBeats</h3>
-                        <p>
-                            Real-time multiplayer music quiz game with a host-player format,
-                            live scoring, and lobby system built with Next.js.
-                        </p>
                     </div>
-                </a>
+                    <div class="project-preview-content">
+                        <h3>BuzzBeats</h3>
+                        <div class="project-tech-badges">
+                            <span class="project-tech-badge">Next.js</span>
+                            <span class="project-tech-badge">WebSockets</span>
+                            <span class="project-tech-badge">Node.js</span>
+                        </div>
+                        <p>Real-time multiplayer music quiz game with host-player format, live scoring, and a lobby system.</p>
+                    </div>
+                    <div class="project-preview-action">
+                        <a href="projects.html#buzzbeats">Details</a>
+                    </div>
+                </div>
 
             </div>
             <p><a href="projects.html">View all projects &rarr;</a></p>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta">
+            <h2>Let's Build Something Together</h2>
+            <p>Open to full-time roles, internships, and collaboration starting Summer / Fall 2026.</p>
+            <div class="cta-links">
+                <a href="contact.html" class="cta-btn-filled">Get In Touch</a>
+                <a href="projects.html" class="cta-btn-outline">View Projects</a>
+            </div>
         </section>
 
     </main>

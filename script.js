@@ -125,12 +125,26 @@ function setupBackToTop() {
 }
 
 
+// ── 6. Clickable project preview cards ──
+function setupClickableCards() {
+    var cards = document.querySelectorAll('.project-preview[data-href]');
+    cards.forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            // Let inner links handle their own navigation
+            if (e.target.tagName === 'A' || e.target.closest('a')) return;
+            window.location.href = card.getAttribute('data-href');
+        });
+    });
+}
+
+
 // ── Run everything once the page is loaded ──
 document.addEventListener('DOMContentLoaded', function() {
     setActiveNav();
     setupContactForm();
     setupScrollReveal();
     setupBackToTop();
+    setupClickableCards();
 
     // Typewriter only on the home page
     typewriter('hero-subtitle', [
