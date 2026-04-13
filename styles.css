@@ -74,7 +74,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -109,19 +109,19 @@ nav ul li a:hover {
 
 /* ── Main Content Wrapper ── */
 main {
-    max-width: 1000px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: 20px auto;
     padding: 0 24px;
 }
 
 
 /* ── Sections ── */
 section {
-    background-color: var(--bg-section);
-    border: 1px solid var(--border);
+    background-color: transparent;
+    border: none;
     border-radius: 12px;
-    padding: 36px;
-    margin-bottom: 28px;
+    padding: 36px 0;
+    margin-bottom: 12px;
     animation: fadeInUp 0.5s ease both;
 }
 
@@ -268,14 +268,7 @@ footer a:hover {
 }
 
 
-/* ── Hero Section ── */
-#hero {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    background: linear-gradient(135deg, var(--bg-section) 0%, #0d1526 100%);
-    padding: 48px 40px;
-}
+/* ── Hero Section (base — overridden by #hero layout block below) ── */
 
 .hero-text {
     flex: 1;
@@ -361,7 +354,111 @@ footer a:hover {
 }
 
 
-/* ── Skills Grid ── */
+/* ── Stats Row ── */
+.stats-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 120px;
+    background: linear-gradient(135deg, #0d1224 0%, #112240 100%);
+    border: 1px solid rgba(100, 255, 218, 0.12);
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.stat-item:hover {
+    border-color: var(--accent-cyan);
+    transform: translateY(-3px);
+}
+
+.stat-item .stat-number {
+    display: block;
+    color: var(--accent-cyan);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-item .stat-label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+
+
+/* ── Skills Icon Grid ── */
+.skills-icon-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.skill-col {
+    flex: 1;
+    min-width: 160px;
+    background-color: #0d1224;
+    border: 1px solid rgba(100, 255, 218, 0.12);
+    border-radius: 10px;
+    padding: 18px 22px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skill-col:hover {
+    border-color: rgba(100, 255, 218, 0.35);
+    transform: translateY(-3px);
+}
+
+.skill-col h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    border-left: 3px solid var(--accent-cyan);
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+.skill-icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-icon-list li {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.08);
+    color: var(--text-primary);
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+.skill-icon-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.skill-icon-list li::before {
+    content: '▸';
+    color: var(--accent-cyan);
+    font-size: 0.75em;
+    flex-shrink: 0;
+}
+
+
+/* ── Skills Grid (legacy, kept for backward compat) ── */
 .skills-grid {
     display: flex;
     gap: 16px;
@@ -400,8 +497,8 @@ footer a:hover {
 .project-preview {
     flex: 1;
     min-width: 200px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
+    background-color: #0d1224;
+    border: 1px solid rgba(100, 255, 218, 0.12);
     border-radius: 10px;
     padding: 16px;
     transition: border-color 0.2s ease, transform 0.2s ease;
@@ -439,10 +536,10 @@ footer a:hover {
 article.project-card {
     display: flex;
     gap: 28px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     padding: 28px;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
+    background-color: #0d1224;
+    border: 1px solid rgba(100, 255, 218, 0.12);
     border-radius: 12px;
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
@@ -452,11 +549,41 @@ article.project-card:hover {
     transform: translateY(-3px);
 }
 
+.project-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
 .project-image img {
     width: 220px;
     border-radius: 8px;
     object-fit: cover;
     opacity: 0.85;
+}
+
+/* Live site button under the project image */
+.project-live-link {
+    display: block;
+    width: 220px;
+    text-align: center;
+    background-color: var(--accent-cyan);
+    color: #0a0e1a;
+    padding: 9px 0;
+    border-radius: 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-live-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(100, 255, 218, 0.3);
+    color: #0a0e1a;
 }
 
 .project-tech {
@@ -486,12 +613,12 @@ article.project-card:hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-links a:first-child {
+.project-link-primary {
     background-color: var(--accent-cyan);
     color: #0a0e1a;
 }
 
-.project-links a:last-child {
+.project-link-secondary {
     border: 1px solid var(--border);
     color: var(--text-muted);
 }
@@ -500,6 +627,16 @@ article.project-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 14px rgba(100, 255, 218, 0.2);
     color: inherit;
+}
+
+
+/* ── Clickable project preview card ── */
+a.project-preview-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-width: 200px;
 }
 
 
@@ -623,9 +760,11 @@ nav ul li a.active {
     display: flex;
     gap: 48px;
     align-items: center;
-    padding: 80px 48px;
+    padding: 44px 48px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #0d1224 0%, #0a1628 100%);
+    border-radius: 16px;
 }
 
 /* Decorative radial glow behind the name */
@@ -777,8 +916,8 @@ nav ul li a.active {
     #hero {
         flex-direction: column-reverse;
         text-align: center;
-        padding: 48px 24px;
-        gap: 28px;
+        padding: 32px 24px;
+        gap: 20px;
     }
 
     #hero h1 {
@@ -806,12 +945,23 @@ nav ul li a.active {
         height: 160px;
     }
 
-    /* Skills grid: single column, full width */
-    .skills-grid {
+    /* Stats row: two columns on tablet */
+    .stats-row {
+        gap: 12px;
+    }
+
+    .stat-item {
+        min-width: calc(50% - 8px);
+    }
+
+    /* Skills grids: single column, full width */
+    .skills-grid,
+    .skills-icon-grid {
         flex-direction: column;
     }
 
-    .skill-card {
+    .skill-card,
+    .skill-col {
         min-width: 0;
         width: 100%;
     }
@@ -831,10 +981,18 @@ nav ul li a.active {
         flex-direction: column;
     }
 
+    .project-image {
+        width: 100%;
+    }
+
     .project-image img {
         width: 100%;
         max-height: 220px;
         object-fit: cover;
+    }
+
+    .project-live-link {
+        width: 100%;
     }
 
     /* Contact: stack form above info */

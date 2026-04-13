@@ -18,8 +18,10 @@
             <div class="logo">SAG</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="materialize.html">Profile</a></li>
             </ul>
         </nav>
     </header>
@@ -56,48 +58,35 @@
             </div>
         </section>
 
-        <!-- About Summary -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I'm pursuing a <strong>Bachelor's degree in Software Engineering</strong> at Miami University, with an expected graduation date of May 2026.
-                My passion lies in building full-stack web applications that solve real-world problems, ranging from sports analytics platforms to job tracking tools and interactive multiplayer games.
-                I care deeply about writing clean, maintainable code and designing user experiences that feel intuitive and polished.
-                Throughout my academic career, I have taken courses in data structures, algorithms, software design, databases, and machine learning, giving me a strong theoretical foundation to go alongside my hands-on project work.
-                I am most comfortable working in <em>JavaScript and Python</em>, and I have built and deployed multiple full-stack applications using React on the frontend and Flask on the backend.
-                Every project I build gets deployed to the web, because I believe that shipping real, live products is what separates learning from actually doing.
-                I am always pushing myself to learn new tools and frameworks, and I am currently deepening my skills in Next.js, WebSockets, and data engineering pipelines.
-            </p>
-            <p>
-                Outside of coding, I stay active by going to the gym regularly, which helps me maintain the focus and discipline that carries over into my work as a developer.
-                I'm a big sports fan (especially basketball), which is actually what inspired me to build StatScout, my multi-sport analytics platform.
-                I love exploring new music, which led me to create BuzzBeats, a real-time multiplayer music quiz game I built with a few friends.
-                I enjoy hanging out with friends and having conversations about technology, entrepreneurship, and where the industry is headed.
-                I believe the best developers are curious people who are genuinely interested in the problems they are solving, not just the code they are writing.
-                I bring that mindset to every project: I always start by asking <em>"what problem is this solving and for whom?"</em> before writing a single line of code.
-                My goal after graduation is to join a product-focused engineering team where I can continue growing as a developer and contribute to something meaningful.
-            </p>
-
-            <!-- Aside: Quick Facts -->
-            <aside>
-                <h3>Quick Facts</h3>
-                <ul>
-                    <li><strong>Degree:</strong> B.S. Software Engineering</li>
-                    <li><strong>School:</strong> Miami University</li>
-                    <li><strong>Graduation:</strong> May 2026</li>
-                    <li><strong>Location:</strong> Westerville, OH</li>
-                    <li><strong>Open to:</strong> <u>Internships &amp; Full-Time Roles</u></li>
-                </ul>
-            </aside>
-        </section>
-
         <!-- Skills Section -->
         <section id="skills">
             <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
+
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Projects Deployed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Years Coding</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2026</span>
+                    <span class="stat-label">Graduation</span>
+                </div>
+            </div>
+
+            <!-- Skills Icon Grid -->
+            <div class="skills-icon-grid">
+                <div class="skill-col">
                     <h3>Languages</h3>
-                    <ul>
+                    <ul class="skill-icon-list">
                         <li>JavaScript</li>
                         <li>Python</li>
                         <li>Java</li>
@@ -106,9 +95,9 @@
                         <li>HTML &amp; CSS</li>
                     </ul>
                 </div>
-                <div class="skill-card">
+                <div class="skill-col">
                     <h3>Frameworks &amp; Libraries</h3>
-                    <ul>
+                    <ul class="skill-icon-list">
                         <li>React</li>
                         <li>Next.js</li>
                         <li>Flask</li>
@@ -116,9 +105,9 @@
                         <li>Bootstrap</li>
                     </ul>
                 </div>
-                <div class="skill-card">
+                <div class="skill-col">
                     <h3>Tools &amp; Platforms</h3>
-                    <ul>
+                    <ul class="skill-icon-list">
                         <li>Git &amp; GitHub</li>
                         <li>PostgreSQL</li>
                         <li>Supabase</li>
@@ -180,35 +169,38 @@
             <h2>Featured Projects</h2>
             <div class="project-preview-grid">
 
-                <div class="project-preview">
-                    <img src="images/statscout.png" alt="StatScout project screenshot">
-                    <h3>StatScout</h3>
-                    <p>
-                        Multi-sport analytics platform covering NBA props and soccer
-                        with real-time betting odds, hit rates, and trust scores.
-                    </p>
-                    <a href="projects.html">See Details</a>
-                </div>
+                <a href="projects.html#statscout" class="project-preview-link">
+                    <div class="project-preview">
+                        <img src="images/statscout.png" alt="StatScout project screenshot">
+                        <h3>StatScout</h3>
+                        <p>
+                            Multi-sport analytics platform covering NBA props and soccer
+                            with real-time betting odds, hit rates, and trust scores.
+                        </p>
+                    </div>
+                </a>
 
-                <div class="project-preview">
-                    <img src="images/applytrack.png" alt="ApplyTrack project screenshot">
-                    <h3>ApplyTrack</h3>
-                    <p>
-                        Full-stack job application tracker featuring a Kanban board,
-                        dashboard analytics, and JWT-based user authentication.
-                    </p>
-                    <a href="projects.html">See Details</a>
-                </div>
+                <a href="projects.html#applytrack" class="project-preview-link">
+                    <div class="project-preview">
+                        <img src="images/applytrack.png" alt="ApplyTrack project screenshot">
+                        <h3>ApplyTrack</h3>
+                        <p>
+                            Full-stack job application tracker featuring a Kanban board,
+                            dashboard analytics, and JWT-based user authentication.
+                        </p>
+                    </div>
+                </a>
 
-                <div class="project-preview">
-                    <img src="images/buzzbeats.png" alt="BuzzBeats project screenshot">
-                    <h3>BuzzBeats</h3>
-                    <p>
-                        Real-time multiplayer music quiz game with a host-player format,
-                        live scoring, and lobby system built with Next.js.
-                    </p>
-                    <a href="projects.html">See Details</a>
-                </div>
+                <a href="projects.html#buzzbeats" class="project-preview-link">
+                    <div class="project-preview">
+                        <img src="images/buzzbeats.png" alt="BuzzBeats project screenshot">
+                        <h3>BuzzBeats</h3>
+                        <p>
+                            Real-time multiplayer music quiz game with a host-player format,
+                            live scoring, and lobby system built with Next.js.
+                        </p>
+                    </div>
+                </a>
 
             </div>
             <p><a href="projects.html">View all projects &rarr;</a></p>
