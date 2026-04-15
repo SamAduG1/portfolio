@@ -698,6 +698,87 @@ a.project-preview-link {
 }
 
 
+/* ── Image Card Gallery ── */
+.card-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-bottom: 36px;
+}
+
+.image-card {
+    flex: 1 1 calc(33.33% - 16px);
+    max-width: calc(33.33% - 16px);
+    background-color: #0d1224;
+    border: 1px solid rgba(100, 255, 218, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    border-color: rgba(100, 255, 218, 0.4);
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.25s ease;
+}
+
+.image-card:hover img {
+    opacity: 0.88;
+}
+
+.image-card-caption {
+    padding: 16px 18px 18px;
+}
+
+.image-card-caption h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.image-card-caption p {
+    color: var(--text-muted);
+    font-size: 0.86em;
+    margin: 0 0 10px 0;
+    line-height: 1.65;
+}
+
+.card-tag {
+    display: inline-block;
+    background: rgba(100, 255, 218, 0.07);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 4px;
+    padding: 2px 9px;
+    font-size: 0.72em;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.3px;
+    margin-right: 4px;
+    margin-top: 2px;
+}
+
+.gallery-row-label {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--accent-cyan);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 28px 0 14px 0;
+    border-left: 3px solid var(--accent-cyan);
+    padding-left: 10px;
+}
+
+
 /* ── CTA Section ── */
 #cta {
     text-align: center;
@@ -1100,6 +1181,12 @@ nav ul li a.active {
         font-size: 1.6em;
     }
 
+    /* Image cards: 2 per row on tablet */
+    .image-card {
+        flex: 1 1 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+
     /* Project previews: single column */
     .project-preview-grid {
         flex-direction: column;
@@ -1173,6 +1260,12 @@ nav ul li a.active {
     }
 
     /* Skills and project previews already single column from 768px breakpoint */
+
+    /* Image cards: 1 per row on mobile */
+    .image-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 
     /* Section headings */
     h1 {

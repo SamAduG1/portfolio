@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Gallery - Sam Adu-Gyapong's deployed applications and development work">
+    <title>Gallery | Sam Adu-Gyapong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">SAG</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="gallery-header">
+            <h1>Project Gallery</h1>
+            <p>
+                A visual showcase of my deployed applications and development work.
+                Every project here is <strong>live on the web</strong> and built to solve a real problem.
+                Click any card to explore the project in detail.
+            </p>
+        </section>
+
+        <section id="gallery">
+
+            <!-- Row 1: Live Projects -->
+            <p class="gallery-row-label">Live Projects</p>
+            <div class="card-gallery">
+
+                <div class="image-card">
+                    <a href="projects.html#statscout">
+                        <img src="images/statscout.png" alt="StatScout multi-sport analytics platform screenshot">
+                    </a>
+                    <div class="image-card-caption">
+                        <h3>StatScout</h3>
+                        <p>
+                            Multi-sport analytics platform delivering real-time betting odds,
+                            hit rates, and custom trust scores for NBA and soccer markets.
+                        </p>
+                        <span class="card-tag">React</span>
+                        <span class="card-tag">Flask</span>
+                        <span class="card-tag">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <a href="projects.html#applytrack">
+                        <img src="images/applytrack.png" alt="ApplyTrack job application tracker screenshot">
+                    </a>
+                    <div class="image-card-caption">
+                        <h3>ApplyTrack</h3>
+                        <p>
+                            Full-stack job application manager with a Kanban board,
+                            dashboard analytics, and JWT-based user authentication.
+                        </p>
+                        <span class="card-tag">React</span>
+                        <span class="card-tag">Flask</span>
+                        <span class="card-tag">JWT Auth</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <a href="https://buzz-beats.vercel.app/" target="_blank">
+                        <img src="images/buzzbeats.png" alt="BuzzBeats music trivia game screenshot">
+                    </a>
+                    <div class="image-card-caption">
+                        <h3>BuzzBeats</h3>
+                        <p>
+                            Jackbox-style multiplayer music trivia. Players join on phones,
+                            host runs on a shared screen. 5 game modes, 600+ songs, Web Audio API synthesis.
+                        </p>
+                        <span class="card-tag">Next.js 15</span>
+                        <span class="card-tag">Socket.io</span>
+                        <span class="card-tag">TypeScript</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Row 2: Development Work -->
+            <p class="gallery-row-label">Development Work</p>
+            <div class="card-gallery">
+
+                <div class="image-card">
+                    <a href="projects.html#capstone">
+                        <img src="images/capstone.png" alt="Multi-Sensor Data Visualization Toolkit screenshot">
+                    </a>
+                    <div class="image-card-caption">
+                        <h3>Capstone: Data Toolkit</h3>
+                        <p>
+                            Senior capstone project applying ML anomaly detection to health
+                            sensor data, visualized in an interactive Plotly and Dash dashboard.
+                        </p>
+                        <span class="card-tag">Python</span>
+                        <span class="card-tag">Plotly</span>
+                        <span class="card-tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <a href="projects.html#statscout">
+                        <img src="images/statscout2.png" alt="StatScout live odds dashboard detail view">
+                    </a>
+                    <div class="image-card-caption">
+                        <h3>StatScout: Live Dashboard</h3>
+                        <p>
+                            The live odds interface showing real-time props with hit rate
+                            filters, trust score rankings, and matchup context.
+                        </p>
+                        <span class="card-tag">React</span>
+                        <span class="card-tag">REST API</span>
+                        <span class="card-tag">Live Data</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <a href="about.html">
+                        <img src="images/profile.jpg" alt="Sam Adu-Gyapong headshot">
+                    </a>
+                    <div class="image-card-caption">
+                        <h3>Sam Adu-Gyapong</h3>
+                        <p>
+                            Software Engineering student at Miami University graduating May 2026,
+                            building full-stack web applications and deployed production systems.
+                        </p>
+                        <span class="card-tag">Miami University</span>
+                        <span class="card-tag">Class of 2026</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sam Adu-Gyapong. All Rights Reserved.</p>
+        <p>
+            <a href="https://github.com/SamAduG1" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/sam-adu-gyapong-6a8b8130a/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to top">&#8679;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

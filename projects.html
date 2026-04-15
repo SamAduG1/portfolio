@@ -20,6 +20,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 
             </ul>
@@ -75,9 +76,9 @@
                     </tr>
                     <tr>
                         <td><strong>BuzzBeats</strong></td>
-                        <td>Next.js, Node.js, WebSockets</td>
-                        <td>Team</td>
-                        <td><em>In Development</em></td>
+                        <td>Next.js 15, Socket.io, TypeScript</td>
+                        <td>Personal</td>
+                        <td><em>Live &amp; Active</em></td>
                     </tr>
                     <tr>
                         <td><strong>Multi-Sensor Toolkit</strong></td>
@@ -185,35 +186,36 @@
             <!-- BuzzBeats -->
             <article class="project-card" id="buzzbeats">
                 <div class="project-image">
-                    <img src="images/buzzbeats.png" alt="BuzzBeats application screenshot">
+                    <img src="images/buzzbeats.png" alt="BuzzBeats music trivia game screenshot">
+                    <a href="https://buzz-beats.vercel.app/" target="_blank" class="project-live-link">View Live Site</a>
                 </div>
                 <div class="project-details">
                     <h2>BuzzBeats</h2>
-                    <p class="project-tech">Next.js &bull; Node.js &bull; WebSockets &bull; Spotify API</p>
+                    <p class="project-tech">Next.js 15 &bull; React 19 &bull; TypeScript &bull; Node.js &bull; Express &bull; Socket.io &bull; Tailwind v4</p>
                     <p>
-                        BuzzBeats is a <strong>real-time multiplayer music quiz game</strong> built for people who love music and a bit of friendly competition.
-                        The concept is straightforward: a host creates a game lobby, selects a playlist or genre, and players join via a shared code on their own device.
-                        Once the game starts, audio clips are played and players race to identify the song or artist as quickly as possible, as both speed and accuracy affect your score.
-                        The real-time aspect is powered by <em>WebSockets</em>, which allow the host and all connected players to stay in sync without any page refreshes or polling.
-                        This was my first time building a project with WebSockets, and it was one of the most challenging and rewarding technical experiences I have had.
-                        Designing the event model (what messages get sent, when, and to whom) required careful thinking about race conditions, disconnections, and state synchronization across clients.
-                        The project was built as a team effort, which also gave me experience with collaborative Git workflows, code reviews, and dividing responsibilities across a shared codebase.
+                        BuzzBeats is a <strong>Jackbox-style real-time multiplayer music trivia game</strong> where players join on their phones and the host runs the game on a shared screen.
+                        The game is built as a monorepo with shared TypeScript types between the client and server, with the frontend on Vercel and the backend on Railway.
+                        Song content is powered by the <em>iTunes Search API</em>, giving access to 600+ curated songs and album art across 9 genres.
+                        All in-game audio, from the lobby ambience to the boss-battle sudden death pulse, is synthesized entirely in-browser using the <u>Web Audio API</u> with zero audio files served.
+                        The room system supports QR code joining, team mode with drag-and-drop assignments, and an adult mode, and players who lose connection mid-game rejoin seamlessly with their score and state preserved.
                     </p>
                     <p>
-                        BuzzBeats is currently in active development and has not yet been deployed to a public URL, but the core gameplay loop is fully functional locally.
-                        We are working on adding a <u>Spotify integration</u> to allow hosts to pull from their own playlists, which requires handling OAuth authentication with the Spotify API.
-                        The frontend is built in <strong>Next.js</strong>, which gave us server-side rendering capabilities and a clean routing structure for the different game views: the host lobby, player lobby, game screen, and results screen.
-                        Future plans include leaderboards, custom round timers, and the ability to save and replay past games.
-                        Once deployed, this will be the project I am most excited to share because it is genuinely fun to play with friends.
+                        The most interesting architectural decision was implementing the five game modes via a <strong>Strategy pattern</strong>: each mode (Classic, Speed, Snippet Challenge, Elimination, and Lyric Word Match) is a self-contained strategy that plugs into the core game engine without modifying it, making new modes trivial to add.
+                        Full real-time communication is handled by Socket.io with reconnection logic built into the event model from the start, so race conditions and dropped connections were handled by design rather than patched after the fact.
+                        BuzzBeats is live at <a href="https://buzz-beats.vercel.app/" target="_blank">buzz-beats.vercel.app</a> and is the project I am most proud of technically.
                     </p>
                     <h3>Key Features</h3>
                     <ul>
-                        <li>Real-time multiplayer via WebSocket connections</li>
-                        <li>Host and player roles with separate control panels</li>
-                        <li>Live leaderboard and per-round scoring</li>
-                        <li>Lobby system with shareable join codes</li>
-                        <li>Music integration for audio clip playback during rounds</li>
+                        <li>5 game modes (Classic, Speed, Snippet Challenge, Elimination, Lyric Word Match) via Strategy pattern</li>
+                        <li>Socket.io real-time communication with seamless mid-game reconnection</li>
+                        <li>All audio synthesized in-browser with the Web Audio API (zero audio files)</li>
+                        <li>iTunes Search API integration: 600+ songs, album art, across 9 genres</li>
+                        <li>Room system with QR code joining, team mode, and host/player roles</li>
+                        <li>Monorepo architecture with shared TypeScript types across client and server</li>
                     </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/SamAduG1/BuzzBeats" target="_blank" class="project-link-secondary">GitHub Repo</a>
+                    </div>
                 </div>
             </article>
 
