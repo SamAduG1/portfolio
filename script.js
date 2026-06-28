@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typewriter only on the home page
     typewriter('hero-subtitle', [
         'Full Stack Developer',
-        'Software Engineering Student',
+        'Software Engineer',
         'React & Flask Builder',
         'Problem Solver'
     ]);
